@@ -1,5 +1,7 @@
 import sys
-import datetime
 print(sys.version)
+
+
+import datetime
 x = datetime.datetime.now()
 print(x)
