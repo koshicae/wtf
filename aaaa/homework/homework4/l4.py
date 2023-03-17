@@ -9,7 +9,7 @@
 #        print("vam ispolnilos " +str(a)+" godi")
 #        a+=1
 # print('pozdri')
-# for c in range(1,18):
+# for c in range(1,18): #start stop step
 #     1, 18 cycle range, если не писать 1, то берёт от 0 до 18
 #    print("Вы еще не достигли совершеннолетия")
 #    print("Вам недавно исполнилось", c)
@@ -30,12 +30,13 @@
 # impar = []
 #
 # for i in range(20):
-#     if i % 2 == 0:
-#         par.append(i)
+#     if i %2 == 0:
+#          par.append(i)
 #     else:
 #         impar.append(i)
-# print(par)
-# print(impar)
+#     print(par)
+#     print(impar)
+#     print()
 # =
 # +=
 # -=
@@ -80,8 +81,8 @@
 # txt = f"Меня зовут Джон, и мне {age}"
 # print(txt)
 
-quantity = 3
-itemno = 567
-price = 49.95
-myorder = "Я хочу {0} единиц товара {2} за {1} долларов."
-print(myorder.format(quantity, price, itemno))
+# quantity = 3
+# itemno = 567
+# price = 49.95
+# myorder = "Я хочу {0} единиц товара {2}за {1} долларов."
+# print(myorder.format(quantity, price, itemno))
