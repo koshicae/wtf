@@ -57,7 +57,7 @@
 # a.sort()	#Sorts the list
 # print(a)
 
-# tuple_ex = ('Hola', 5, "Test", 4.55, False)
+# tuple_ex = ('Hola', 5, "Test", 4.55, False) #no commands
 #tuple_ex.append() #Error
 # print(tuple_ex[0])
 # print(tuple_ex + ("New", "data", 1))
@@ -67,13 +67,19 @@
 # set_array = set(simple_array)
 #
 # print(simple_array)
-# print(set_array)
+# print(set_array) #no repeatables
 # print(set_array_2)
 
-dictionary = {"Key": "Value", "Int": 3, "Float": 23.4, "Bool": True} #string все
-print(dictionary)
-print(dictionary.get('Key'))
-dictionary.update({"Int": 4})
-print(dictionary)
-dictionary["Key"] = "New Value"
-print(dictionary)
+# dictionary = {"Key": "Value", "Int": 3, "Float": 23.4, "Bool": True} #string все
+# print(dictionary)
+# print(dictionary.get('Key'))
+# dictionary.update({"Int": 4})
+# print(dictionary)
+# dictionary["Key"] = "New Value"
+# print(dictionary)
+
+meow_num = {'cat', 7, 'mrr'}
+woof_num = {'dog', 'bark', 7, 7, 7, 7, 7, 7, 7, 77}
+print(meow_num.intersection(woof_num))
+print(meow_num.union(woof_num))
+print(woof_num)
