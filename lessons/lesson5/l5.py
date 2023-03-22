@@ -70,16 +70,16 @@
 # print(set_array) #no repeatables
 # print(set_array_2)
 
-# dictionary = {"Key": "Value", "Int": 3, "Float": 23.4, "Bool": True} #string все
+dictionary = {"Key": "Value", "Int": 3, "Float": 23.4, "Bool": True} #string все
 # print(dictionary)
-# print(dictionary.get('Key'))
+print(dictionary.get'Key')
 # dictionary.update({"Int": 4})
 # print(dictionary)
 # dictionary["Key"] = "New Value"
 # print(dictionary)
 
-meow_num = {'cat', 7, 'mrr'}
-woof_num = {'dog', 'bark', 7, 7, 7, 7, 7, 7, 7, 77}
-print(meow_num.intersection(woof_num))
-print(meow_num.union(woof_num))
-print(woof_num)
+# meow_num = {'cat', 7, 'mrr'}
+# woof_num = {'dog', 'bark', 7, 7, 7, 7, 7, 7, 7, 77}
+# print(meow_num.intersection(woof_num))
+# print(meow_num.union(woof_num))
+# print(woof_num)
