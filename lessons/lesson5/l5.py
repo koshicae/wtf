@@ -57,7 +57,7 @@
 # a.sort()	#Sorts the list
 # print(a)
 
-# tuple_ex = ('Hola', 5, "Test", 4.55, False) #no commands
+# tuple_ex = ('Hola', 5, "Test", 4.55, False) #no commands/not changeable
 #tuple_ex.append() #Error
 # print(tuple_ex[0])
 # print(tuple_ex + ("New", "data", 1))
