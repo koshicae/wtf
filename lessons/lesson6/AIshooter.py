@@ -8,14 +8,16 @@ nr_hits = 1
 def attack(pers_hp, dmg = 5):
     #calling a global variables
     global armor, nr_hits
-
+    print(pers_hp, armor, max_pers_hp, nr_hits)
     #if we have armor
     if armor - dmg > 0:
         # decrease armor level
         armor = armor - dmg
+        print(pers_hp, armor, max_pers_hp, nr_hits)
     else:
         #decrease hp level
         pers_hp = pers_hp-dmg
+        print(pers_hp, armor, max_pers_hp, nr_hits)
     return pers_hp #return the value
 
 def heal(pers_hp, live):
@@ -30,12 +32,16 @@ def heal(pers_hp, live):
 
     return pers_hp # return the value
 
-#Call Functions
+# Call Functions
+pers_hp = attack(pers_hp, 40)
+print(pers_hp)
+pers_hp = attack(pers_hp, 40)
+print(pers_hp)
 pers_hp = attack(pers_hp, 40)
 print(pers_hp)
 
-pers_hp = heal(pers_hp, 20)
-print(pers_hp)
+# pers_hp = heal(pers_hp, 20)
+# print(pers_hp)
 
 # #Make a battle
 # for i in range(1, 100):
@@ -51,25 +57,25 @@ print(pers_hp)
 #
 # print('You are dead')
 
-for i in range(1, 100):
-    #stop cycle if hp drops below 0
-    if pers_hp > 0:
-        nr_hits = nr_hits + 1
-
-        #Make a miss every 3 hits
-        if nr_hits % 3 == 0:
-            pass
-        else:
-            pers_hp = attack(pers_hp)
-        print('----' + pers_name + '---')
-        print('Live ')
-        print(pers_hp)
-        print('Armor ')
-        print(armor)
-        print('Hit nr ', nr_hits)
-        print('')
-
-    else:
-        break
-
-print('You are dead')
+# for i in range(1, 100):
+#     #stop cycle if hp drops below 0
+#     if pers_hp > 0:
+#         nr_hits = nr_hits + 1
+#
+#         #Make a miss every 3 hits
+#         if nr_hits % 3 == 0:
+#             pass
+#         else:
+#             pers_hp = attack(pers_hp)
+#         print('----' + pers_name + '---')
+#         print('Live ')
+#         print(pers_hp)
+#         print('Armor ')
+#         print(armor)
+#         print('Hit nr ', nr_hits)
+#         print('')
+#
+#     else:
+#         break
+#
+# print('You are dead')

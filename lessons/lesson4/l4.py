@@ -15,7 +15,7 @@
 #    print("Вам недавно исполнилось", c)
 #    print("Осталось", 18 - c, "лет")
 # print("Поздравляю с совершеннолетием!!")
-print (5.6%3.9)
+# print (5.6%3.9)
 # a = 5
 # b = 3.6
 # print(a+b)
@@ -23,7 +23,7 @@ print (5.6%3.9)
 # print(a*b)
 # print(a**b)
 # print(a/b)
-print(5%3.5)
+# print(5%3.5)
 # import math
 # print(math.pi)
 # par = []

@@ -10,7 +10,6 @@
 # else:
 #     print("Not a palindrome!")
 
-
 # Function declaration
 # def test(): # def = definition
     # Function block
@@ -32,13 +31,13 @@
 # calc(4, 9)
 
 
-# Function declaration with initial values
-# def meow(a, c, b=5):
+# #Function declaration with initial values
+# def meow(a, b=5):
 #     print(a + b)
 #     print(a - b)
 #     print(a * b)
-
-# Function call; Send arguments
+#
+# #Function call; Send arguments
 # meow(4)
 # meow(5, 8)
 
@@ -73,7 +72,7 @@
 #Function declaration; using *args
 # def arg_calc(*args):
     # *args - последний в списке, ошибку даст если поставить вначале
-    # unknown > by default > *args > key:args
+    # unknown > by default > *args > kwordargs?
     # print(*args)
     # print(args)
     # print(args[0] + args[1])
