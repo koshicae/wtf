@@ -1,5 +1,5 @@
 # ch_name = input('State the name of your character: ')
-ch_name = 'kiwi'
+ch_name = 'kiwi' #name by default
 import random
 
 pers_hp = 100
@@ -26,24 +26,30 @@ def stats():
     print('Character hp:', pers_hp,
           'Character armor:', armor, end=' ')
     print()
-    if pers_hp < 100 and pers_hp != 0:
-        o = random.random()
-        if o >= 0.1:
-            print('Healing received:', hp, 'Total character hp:', heal(hp))
-        else:
-            print('Oops! You just spilled your healing potion. Healing wasn\'t received for this iteration :(')
-
-
     if pers_hp == 0:
         print()
 
-# Heal function
-def heal(hp):
-    global pers_hp
-    pers_hp += hp
+
+def crit_heal():
+    global pers_hp, hp
+    hp = int(heal())
+    r = random.random()
+    if r <= 0.1:
+        hp *= 2
+        print('Critical heal!')
+        pers_hp += hp
+    else:
+        pers_hp += hp
     if pers_hp > 100:
         pers_hp = 100
     return pers_hp
+
+# Heal function
+def heal(): #random heal
+    global rng_hp_value, hp
+    rng_hp_value = list(range(10, 21, 5))
+    hp = random.choice(rng_hp_value)
+    return hp
 
 # Critical damage function
 def crit_atk(dmg):
@@ -55,7 +61,7 @@ def crit_atk(dmg):
 
 def random_damage():
     global rng_damage_value
-    rng_damage_value = list(range(5, 151, 5))
+    rng_damage_value = list(range(5, 76, 5))
     dmg = random.choice(rng_damage_value)
     return dmg
 
@@ -67,8 +73,14 @@ for i in range(0, 10000):
         print('The enemy missed their hit!')
         if pers_hp < 100:
             print('This is your chance! Try to heal yourself!')
-            heal(hp)
-            stats()
+            if pers_hp < 100 and pers_hp != 0:
+                o = random.random()
+                if o >= 0.2:
+                    stats()
+                    crit_heal()
+                    print('Healing received:', hp, 'Total character hp:', pers_hp)
+                else:
+                    print('Oops! You just spilled your healing potion. Healing wasn\'t received for this iteration :(')
             print()
         else:
             print()
