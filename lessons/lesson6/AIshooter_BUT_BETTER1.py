@@ -1,35 +1,38 @@
-# ch_name = input('State the name of your character: ')
-ch_name = 'kiwi' #name by default
 import random
+
+# ch_name = input('State the name of your character: ')
+ch_name = 'kiwi'  # name by default
+
 
 pers_hp = 100
 armor = 50
-hp = 10
 # Attack function
-def attack(dmg):
+
+
+def attack(damage):
     global armor, pers_hp
-    if dmg > armor:
-        rest_dmg = dmg - armor
+    if damage > armor:
+        rest_dmg = damage - armor
         pers_hp -= rest_dmg
         armor = 0
     else:
-        armor = armor - dmg
+        armor = armor - damage
     if pers_hp <= 0:
         pers_hp = 0
-        print(ch_name, 'got hit for', dmg, 'points of dmg!')
+        print(ch_name, 'got hit for', damage, 'points of dmg!')
         stats()
-        print(ch_name.upper() + ' died!'.upper())
+        print((ch_name + ' died!').upper())
     return pers_hp
+
 
 # Character statistics function
 def stats():
     print('Character hp:', pers_hp,
-          'Character armor:', armor, end=' ')
-    print()
+          'Character armor:', armor)
     if pers_hp == 0:
         print()
 
-
+# Critical heal function
 def crit_heal():
     global pers_hp, hp
     hp = int(heal())
@@ -44,6 +47,7 @@ def crit_heal():
         pers_hp = 100
     return pers_hp
 
+
 # Heal function
 def heal(): #random heal
     global rng_hp_value, hp
@@ -54,7 +58,7 @@ def heal(): #random heal
 # Critical damage function
 def crit_atk(dmg):
     p = random.random()
-    if p <= 0.1:
+    if p >= 0.1:
         dmg *= 2
         print('Critical shot!')
     return dmg
@@ -91,9 +95,11 @@ for i in range(0, 10000):
         attack(dmg)
         if pers_hp > 0:
             print(ch_name, 'got hit for', dmg, 'points of dmg!')
+        # Show characters stats if he's alive
         if pers_hp != 0:
             stats()
             print()
-        if pers_hp == 0:
+        # Don't show characters stats if he's alive
+        else:
             pass
             break
