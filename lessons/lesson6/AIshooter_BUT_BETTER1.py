@@ -21,7 +21,7 @@ def attack(damage):
         pers_hp = 0
         print(ch_name, 'got hit for', damage, 'points of dmg!')
         stats()
-        print((ch_name + ' died!').upper())
+        print('\n' + (ch_name + ' died!').upper())
     return pers_hp
 
 
@@ -29,8 +29,6 @@ def attack(damage):
 def stats():
     print('Character hp:', pers_hp,
           'Character armor:', armor)
-    if pers_hp == 0:
-        print()
 
 # Critical heal function
 def crit_heal():
