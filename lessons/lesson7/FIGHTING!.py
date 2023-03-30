@@ -17,6 +17,8 @@ class Characters():
         self.armor = armor
         self.power = power
         self.max_hp = hp
+
+
 class Game(Characters):
 
     # Function to heal fighter
@@ -27,16 +29,21 @@ class Game(Characters):
             self.hp = self.max_hp
         print(self.name + ' have ', self.hp, ' hp left')
 
-
     # function for attack
     def attacked(self, damage):
-        if self.hp - damage > 0:
-            self.hp -= damage
-            print(self.name + ' have ', self.hp, ' hp left')
+        if self.armor > 0:
+            self.armor -= damage
+            print(self.name + ' has ', self.armor, ' armor left')
             return True
-        else:
-            print(self.name, ' is death')
-            return False
+        elif self.armor <= 0:
+            self.armor == 0
+            if self.hp - damage > 0:
+                self.hp -= damage
+                print(self.name + ' have ', self.hp, ' hp left')
+                return True
+            else:
+                print(self.name, ' is death')
+                return False
 
 
 # Read players number
@@ -90,7 +97,6 @@ while alive:
             break
         except ValueError:
             print('Not desired int input')
-
 
     # game logic
     if move == 1:
