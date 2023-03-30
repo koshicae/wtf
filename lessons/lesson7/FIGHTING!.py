@@ -60,7 +60,7 @@ for i in range(0, nr):
         except ValueError:
             print('Not desired int input')
 
-    while False:
+    while True:
         try:
             armor = int(input('Armor: '))
             break
