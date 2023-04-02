@@ -37,7 +37,10 @@ class Game(Characters):
             if self.armor > 0:  # If armor is still more than 0, write how much armor is left
                 print(self.name + ' has', self.armor, 'armor left')
                 return True  # Checks the condition for "alive"
-            elif self.armor <= 0:  # If armor became less or equal to 0, rest of the damage goes to hp
+            elif self.armor == 0:
+                print(self.name + ' has', self.armor, 'armor left')
+                return True
+            else:  # If armor became less or equal to 0, rest of the damage goes to hp
                 if self.armor < 0:
                     x = abs(self.armor)  # We use the absolute function, to make rest damage into a positive number,
                     # so to avoid further adding to the hp the rest dmg (bcs of its negative value)

@@ -45,7 +45,6 @@ def crit_heal():
         pers_hp = 100
     return pers_hp
 
-
 # Heal function
 def heal(): #random heal
     global rng_hp_value, hp
