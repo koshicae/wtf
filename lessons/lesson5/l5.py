@@ -72,7 +72,7 @@
 
 dictionary = {"Key": "Value", "Int": 3, "Float": 23.4, "Bool": True} #string все
 # print(dictionary)
-print(dictionary.get'Key')
+# print(dictionary.get'Key')
 # dictionary.update({"Int": 4})
 # print(dictionary)
 # dictionary["Key"] = "New Value"
