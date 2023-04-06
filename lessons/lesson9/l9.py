@@ -77,4 +77,4 @@ x = {
 }
 
 print(json.dumps(x))
-print(json.dimps(x, indent=4))
+print(json.dumps(x, indent=4))
