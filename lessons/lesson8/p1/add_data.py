@@ -6,3 +6,8 @@ def add_dataa():
     f = open('student_data.txt', 'w')
     f.write(str(a))
     f.close()
+
+def edit_dataa():
+    f = open('student_data.txt', 'rw')
+    f.read()
+    f.close()

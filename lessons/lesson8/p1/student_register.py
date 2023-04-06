@@ -8,5 +8,8 @@ match option:
         read_dataa()
     case 2:
         add_dataa()
+    case 3:
+        pass
+        edit_dataa()
 
 # Способ редактирования и перезаписи данных о студенте

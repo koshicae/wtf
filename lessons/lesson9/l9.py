@@ -28,10 +28,14 @@ import json
 
 # some JSON:
 x = '{"name":"Alex", "age":20, "city":"Falesti"}'
+print(x)
+print(type(x))
 # parse x:
 y = json.loads(x)
 # the result is a Python dictionary:
+print(type(y))
 print(y["age"])
+print(y)
 
 # a Python object (dict):
 x = {
@@ -39,6 +43,8 @@ x = {
     "age":21,
     "city":"Chisinau"
 }
+y = json.dumps(x)
+print(y)
 
 print(json.dumps({'name': 'John', 'age':30}))
 print(json.dumps(['apple', 'bananas']))
@@ -77,4 +83,15 @@ x = {
 }
 
 print(json.dumps(x))
-print(json.dumps(x, indent=4))
+print(json.dumps(x, indent=4, separators=('.', '=')))
+
+# RegEX
+import re
+
+txt = 'The rain in Spain'
+x = re.search('^The.*Spain$', txt)
+
+if x:
+    print('Yeaaah! We have a winner- I mean a match!')
+else:
+    print('No match sorry')
