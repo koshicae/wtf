@@ -1,5 +1,5 @@
 # import sqlite3
-#
+# # sql, py - service
 # try:
 #     # SQLite = sqlite3
 #     # Connect to DB and create a cursor
@@ -7,7 +7,7 @@
 #     cursor = sqliteConnection.cursor()  # initialize process
 #     print('DB Init')
 #     # Write a query and execute it with cursor
-#     query = 'select sqlite_version()'
+#     query = 'select sqlite_version()' #sql commands - query; " " for one string, triple " " " if more
 #     cursor.execute(query)
 #     # Fetch and output result
 #     result = cursor.fetchall()
@@ -16,13 +16,13 @@
 #     cursor.execute('DROP TABLE IF EXISTS Impact')
 #     # creating table
 #     table = """ CREATE TABLE Impact (
-#                 Email VARCHAR(255) NOT NULL,
+#                 Email VARCHAR(255) NOT NULL, # id integer primary-key; not null - obligation
 #                 First_Name CHAR(25) NOT NULL,
 #                 Last_Name CHAR(25)); """
 #     cursor.execute(table)
 #
 #     # Queries to INSERT records.
-#     cursor.execute('''INSERT INTO Impact VALUES ('Emaill1', 'Anne', 'Watson')''')
+#     cursor.execute('''INSERT INTO Impact VALUES ('Emaill1', 'Anne', 'Watson')''') # 1, email, f_n, l_n; if autoincrement no need for id like 1
 #     cursor.execute('''INSERT INTO Impact VALUES ('Emaill2', 'Marianne', 'Joe')''')
 #     cursor.execute('''INSERT INTO Impact VALUES ('Emaill3', 'Enny', 'Swift')''')
 #     # Display data inserted
